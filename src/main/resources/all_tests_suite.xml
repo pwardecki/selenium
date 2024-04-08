@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Sel">
+
+    <test name="Negative Login Tests">
+        <parameter name="login" value="NotProperLogin">
+        </parameter>
+        <parameter name="password" value="NotProperPassword"></parameter>
+        <classes>
+            <class name="tests.InvalidUsernameAndPassword"/>
+        </classes>
+    </test>
+
+    <test name="Positive Login Tests">
+        <classes>
+            <class name="tests.CorrectUsernameAndPasswordLogin"/>
+        </classes>
+    </test>
+
+</suite>
